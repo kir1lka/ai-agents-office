@@ -1,0 +1,108 @@
+{
+  "contentrating": "Everyone",
+  "description": "Живой пиксельный офис на русском языке, без сцены ТЦК.\n\nCodex и ChatGPT живут в офисе: ходят, отдыхают, пьют кофе и разговаривают. Codex работает за столом, пока выполняет реальную задачу. Его помощники появляются отдельными фиолетовыми персонажами со своими именами. После завершения они отдыхают пять минут, затем уезжают.\n\nЛокальный мост office-bridge.py читает состояния задач Codex в режиме только чтения. Большая панель слева показывает текущую задачу, состояние, файл или короткую команду и публичное сообщение о ходе работы. Скрытые рассуждения и результаты инструментов не считываются. Claude и Ollama исключены. Обои получают данные через http://127.0.0.1:7777/state.\n\nChatGPT — постоянный житель офиса. Для отдельного приложения ChatGPT активность приблизительно определяется по нагрузке процесса; активность ChatGPT в браузере не считывается.\n\nЗапуск: start-office.ps1. Автозапуск при входе в Windows: install-office.ps1. Отключение и удаление автозапуска: uninstall-office.ps1. Подробнее в README-RU.md.\n\nДемо добавляет вымышленных персонажей для просмотра анимаций. Сезон, погода и день/ночь работают по исходной логике (время Киева).\n\nИсходные обои: https://github.com/AlexanderGrandees/thegrandees-ai-office (MIT).\n\nВывеска «Офис AI-агентов», рейтинг по времени задач за сегодня и токены локальных сессий Codex. Статистика дня по Москве. Кнопка «Отдых / перекур» отправляет персонажей на минутный перерыв к зданию; реальные задачи продолжаются.",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0 0 0"
+      },
+      "season": {
+        "index": 0,
+        "options": [
+          {
+            "label": "Авто (по месяцу)",
+            "value": "auto"
+          },
+          {
+            "label": "Весна",
+            "value": "spring"
+          },
+          {
+            "label": "Лето",
+            "value": "summer"
+          },
+          {
+            "label": "Осень",
+            "value": "autumn"
+          },
+          {
+            "label": "Зима",
+            "value": "winter"
+          }
+        ],
+        "order": 100,
+        "text": "Сезон",
+        "type": "combo",
+        "value": "auto"
+      },
+      "sound": {
+        "index": 2,
+        "order": 102,
+        "text": "Звук",
+        "type": "bool",
+        "value": true
+      },
+      "volume": {
+        "index": 3,
+        "max": 100,
+        "min": 0,
+        "order": 103,
+        "text": "Громкость",
+        "type": "slider",
+        "value": 35
+      },
+      "weather": {
+        "index": 1,
+        "options": [
+          {
+            "label": "Авто (меняется сама)",
+            "value": "auto"
+          },
+          {
+            "label": "Ясно",
+            "value": "clear"
+          },
+          {
+            "label": "Дождь",
+            "value": "rain"
+          },
+          {
+            "label": "Гроза",
+            "value": "storm"
+          },
+          {
+            "label": "Снег",
+            "value": "snow"
+          },
+          {
+            "label": "Туман",
+            "value": "fog"
+          },
+          {
+            "label": "Ветер",
+            "value": "wind"
+          }
+        ],
+        "order": 101,
+        "text": "Погода",
+        "type": "combo",
+        "value": "auto"
+      }
+    },
+    "supportsaudioprocessing": false
+  },
+  "preview": "preview-ru.png",
+  "ratingsex": "none",
+  "ratingviolence": "none",
+  "tags": [
+    "Pixel art"
+  ],
+  "title": "TheGrandees AI Office · RU · живой офис",
+  "type": "web",
+  "version": 0,
+  "visibility": "public"
+}

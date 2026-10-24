@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+backup*/
+office-observed.*
+*.log
+*-qa.png
+panel-*.png
+preview.jpg
+.codex-*
+.venv/
+Thumbs.db
+Desktop.ini
