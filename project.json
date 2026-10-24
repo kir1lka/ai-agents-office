@@ -1,19 +1,20 @@
 {
+  "contentrating": "Everyone",
+  "description": "Живой пиксельный офис на русском языке, без сцены ТЦК.\n\nCodex и ChatGPT живут в офисе: ходят, отдыхают, пьют кофе и разговаривают. Codex работает за столом, пока выполняет реальную задачу. Его помощники появляются отдельными фиолетовыми персонажами со своими именами. После завершения они отдыхают пять минут, затем уезжают.\n\nЛокальный мост office-bridge.py читает состояния задач Codex в режиме только чтения. Большая панель слева показывает текущую задачу, состояние, файл или короткую команду и публичное сообщение о ходе работы. Скрытые рассуждения и результаты инструментов не считываются. Claude и Ollama исключены. Обои получают данные через http://127.0.0.1:7777/state.\n\nChatGPT — постоянный житель офиса. Для отдельного приложения ChatGPT активность приблизительно определяется по нагрузке процесса; активность ChatGPT в браузере не считывается.\n\nЗапуск: start-office.ps1. Автозапуск при входе в Windows: install-office.ps1. Отключение и удаление автозапуска: uninstall-office.ps1. Подробнее в README-RU.md.\n\nДемо добавляет вымышленных персонажей для просмотра анимаций. Сезон, погода и день/ночь работают по исходной логике (время Киева).\n\nИсходные обои: https://github.com/AlexanderGrandees/thegrandees-ai-office (MIT).\n\nВывеска «Офис AI-агентов», рейтинг по времени задач за сегодня и токены локальных сессий Codex. Статистика дня по Москве. Кнопка «Отдых / перекур» отправляет персонажей на минутный перерыв к зданию; реальные задачи продолжаются.",
   "file": "index.html",
-  "preview": "preview.jpg",
-  "title": "TheGrandees AI Office",
-  "description": "Піксельний офіс, де агенти — твої відкриті AI-програми",
-  "type": "web",
   "general": {
     "properties": {
-      "season": {
+      "schemecolor": {
         "order": 0,
-        "text": "Сезон",
-        "type": "combo",
-        "value": "auto",
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0 0 0"
+      },
+      "season": {
+        "index": 0,
         "options": [
           {
-            "label": "Авто (за місяцем)",
+            "label": "Авто (по месяцу)",
             "value": "auto"
           },
           {
@@ -21,27 +22,44 @@
             "value": "spring"
           },
           {
-            "label": "Літо",
+            "label": "Лето",
             "value": "summer"
           },
           {
-            "label": "Осінь",
+            "label": "Осень",
             "value": "autumn"
           },
           {
             "label": "Зима",
             "value": "winter"
           }
-        ]
+        ],
+        "order": 100,
+        "text": "Сезон",
+        "type": "combo",
+        "value": "auto"
+      },
+      "sound": {
+        "index": 2,
+        "order": 102,
+        "text": "Звук",
+        "type": "bool",
+        "value": true
+      },
+      "volume": {
+        "index": 3,
+        "max": 100,
+        "min": 0,
+        "order": 103,
+        "text": "Громкость",
+        "type": "slider",
+        "value": 35
       },
       "weather": {
-        "order": 1,
-        "text": "Погода",
-        "type": "combo",
-        "value": "auto",
+        "index": 1,
         "options": [
           {
-            "label": "Авто (змінюється сама)",
+            "label": "Авто (меняется сама)",
             "value": "auto"
           },
           {
@@ -49,7 +67,7 @@
             "value": "clear"
           },
           {
-            "label": "Дощ",
+            "label": "Дождь",
             "value": "rain"
           },
           {
@@ -57,7 +75,7 @@
             "value": "storm"
           },
           {
-            "label": "Сніг",
+            "label": "Снег",
             "value": "snow"
           },
           {
@@ -65,26 +83,26 @@
             "value": "fog"
           },
           {
-            "label": "Вітер",
+            "label": "Ветер",
             "value": "wind"
           }
-        ]
-      },
-      "sound": {
-        "order": 2,
-        "text": "Звук",
-        "type": "bool",
-        "value": true
-      },
-      "volume": {
-        "order": 3,
-        "text": "Гучність",
-        "type": "slider",
-        "min": 0,
-        "max": 100,
-        "value": 35
+        ],
+        "order": 101,
+        "text": "Погода",
+        "type": "combo",
+        "value": "auto"
       }
     },
     "supportsaudioprocessing": false
-  }
+  },
+  "preview": "preview-ru.png",
+  "ratingsex": "none",
+  "ratingviolence": "none",
+  "tags": [
+    "Pixel art"
+  ],
+  "title": "TheGrandees AI Office · RU · живой офис",
+  "type": "web",
+  "version": 0,
+  "visibility": "public"
 }
